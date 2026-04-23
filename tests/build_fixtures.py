@@ -281,6 +281,7 @@ def build_completed_archives(initial_repo_a: Path, initial_repo_b: Path, build_r
             MIGRATED_AUTHOR_EMAIL,
         ],
         ROOT,
+        input_text="y\n",
     )
     return {
         "repo_a": str(repo_a_completed),

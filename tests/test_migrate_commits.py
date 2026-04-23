@@ -91,7 +91,7 @@ def extract_archive(archive_path: Path, destination: Path) -> Path:
             for member in archive.getmembers()
             if member.name and member.name != "."
         }
-        archive.extractall(destination)
+        archive.extractall(destination, filter="fully_trusted")
     if len(roots) != 1:
         raise AssertionError(f"Archive {archive_path} should contain a single top-level directory.")
     return destination / roots.pop()
