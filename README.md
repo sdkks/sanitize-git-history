@@ -1,5 +1,7 @@
 # `migrate_commits.py`
 
+[![Test](https://github.com/sdkks/sanitize-git-history/actions/workflows/test.yml/badge.svg)](https://github.com/sdkks/sanitize-git-history/actions/workflows/test.yml)
+
 `migrate_commits.py` replays commits from Repo A into Repo B with sanitized author and committer identities.
 
 Primary use case: sanitize a private repository before publishing it. The script keeps commit order, dates, and commit messages, but rewrites the human identity fields so original author names and email addresses are not exposed in the public history.
@@ -206,3 +208,7 @@ Those fixtures are used to verify:
 - incremental continuation
 - exact commit message preservation, including multiline messages
 - final tree equality outside `.git`
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](/Users/sakkas/Dev/vibe/git/linear-history/LICENSE).
